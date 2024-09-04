@@ -5,8 +5,9 @@ import styles from './ProjectForm.module.css'
 
 import { useEffect, useState } from 'react'
 
-function ProjectForm() {
+function ProjectForm({handleSubmit, btnText, projectData}) {
     const [categories, setCategories] = useState([])
+    const [project, setProject] = useState(projectData || {})
 
     useEffect(() => {
     fetch('http://localhost:5001/categories', {
@@ -22,24 +23,51 @@ function ProjectForm() {
         .catch((err) => console.log('Erro' + err))
     }, [])
 
+    const submit = (e) => {
+        e.preventDefault()
+        handleSubmit(project)
+    }
+
+    function handleChange(e) {
+        setProject({
+            ...project, [e.target.name]: e.target.value
+        })
+    }
+
+    function handleCategorye(e) {
+        setProject({
+            ...project, category: {
+                id: e.target.value,
+                name: e.target.options[e.target.selectedIndex].text,
+            }
+        })
+    }
+
     return (
-        <form className={styles.form}>
+        <form onSubmit={submit} className={styles.form}>
             <Input 
                 type='text' 
                 text='Nome do Projeto' 
                 name='name'
                 placeholder='Insira o nome do projeto'
+                handleOnChange={handleChange}
+                value={project.name ? project.name : ''}
+
             />
             <Input 
                 type='number' 
                 text='Valor do Projeto' 
-                name='value'
+                name='budget'
                 placeholder='Insira o valor do projeto'
+                handleOnChange={handleChange}
+                value={project.budget ? project.budget : ''}
             />
             <Select 
                 name='category_id' 
                 text='Selecione a categoria'
                 options={categories}
+                handleOnChange={handleCategorye}
+                value={project.category ? project.category.id : ''}
             />             
             <SubmitButton text='Criar' />       
             

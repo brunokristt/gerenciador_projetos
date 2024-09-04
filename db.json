@@ -1,17 +1,98 @@
 {
-    "projects": [],
-    "categories": [
-        {
-            "id": 1,
-            "name": "Infra"
-        },
-        {
-            "id": 2,
-            "name": "Desenvolvimento"
-        },
-        {
-            "id": 3,
-            "name": "Planejamento"
-        }
-    ]
+  "projects": [
+    {
+      "id": "8c22",
+      "name": "Teste",
+      "value": "5",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "85e5",
+      "name": "Teste",
+      "value": "5",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "budget": "45"
+    },
+    {
+      "id": "3ca1",
+      "name": "Teste 99",
+      "value": "5",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "budget": "99"
+    },
+    {
+      "id": "be7b",
+      "name": "Teste 100",
+      "value": "5",
+      "category": {
+        "id": "3",
+        "name": "Planejamento"
+      },
+      "cost": 0,
+      "services": [],
+      "budget": "100"
+    },
+    {
+      "id": "d964",
+      "name": "teste 101",
+      "budget": "101",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "d3cf",
+      "name": "teste 102",
+      "budget": "102",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "48d3",
+      "name": "Teste 103",
+      "budget": "103",
+      "category": {
+        "id": "3",
+        "name": "Planejamento"
+      },
+      "cost": 0,
+      "services": []
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Infra"
+    },
+    {
+      "id": "2",
+      "name": "Desenvolvimento"
+    },
+    {
+      "id": "3",
+      "name": "Planejamento"
+    }
+  ]
 }

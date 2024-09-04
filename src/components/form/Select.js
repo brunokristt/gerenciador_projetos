@@ -4,7 +4,7 @@ function Select({text, name, handleOnChange, value, options}) {
     return (
         <div className={styles.form_control}>
             <label htmlFor={name}>{text}</label>
-            <select 
+            <select onChange={handleOnChange} value={value || ''}
                 name={name}  
                 id={name}
             >            
