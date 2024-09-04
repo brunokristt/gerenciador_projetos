@@ -19,7 +19,7 @@ function ProjectForm() {
         .then((data) => {
             setCategories(data)
         })
-        .catch((err) => console.log(err))
+        .catch((err) => console.log('Erro' + err))
     }, [])
 
     return (
