@@ -22,7 +22,12 @@
     background-color: #222;
 }
 
-.home_container h1 img {
+.home_container img {
     width: 350px;
     margin: 2em 0;
+}
+
+.home_container p {
+    margin-bottom: 1.5em;
+    color: #7b7b7b;
 }
