@@ -1,0 +1,27 @@
+.container {
+    /*largura máxima*/
+    width: 1200px;
+    /*posicionamento mais fácil*/
+    display: flex;
+    /*espaçar os elementos de forma igual*/
+    justify-content: space-between;
+    /*o mesmo espaçamento da esquerda será colocado na direita*/
+    margin: 0 auto;
+    /* se o elemento for maio do que 1200px ele vai para baixo em uma nova linha */
+    flex-wrap: wrap; 
+}
+
+.minHeight {
+    /*tamanho minimo de 75% para o conteudo ocupar um grande espaço da tela*/
+    min-height: 75%;
+}
+
+.start {
+    /*coloca o conteudo todo para o inicio*/
+    justify-content: flex-start;
+}
+
+.colum {
+   flex-direction: column;
+   justify-content: flex-start; 
+}
